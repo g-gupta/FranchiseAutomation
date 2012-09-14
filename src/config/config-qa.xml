@@ -1,0 +1,7 @@
+<config>
+    <facebookUrl>http://www.facebook.com</facebookUrl>
+    <fbuserEmail>sagarwal@clickable.com</fbuserEmail>
+    <fbuserPwd>123avi</fbuserPwd>
+    <fbPageStartCount>42</fbPageStartCount>
+    <fbPageEndCount>45</fbPageEndCount>
+</config>
