@@ -21,8 +21,9 @@ import lib.CommonFuncs
 
 class CreateFBPage {
 
-  val FranchiseAutomation = new FirefoxProfile(new File("C:\\Users\\ggupta\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\mxclx0cc.FranchiseAutomation"))
-  implicit val driver = new FirefoxDriver(FranchiseAutomation)
+  //val FranchiseAutomation = new FirefoxProfile(new File("C:\\Users\\ggupta\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\mxclx0cc.FranchiseAutomation"))
+  //implicit val driver = new FirefoxDriver(FranchiseAutomation)
+  val driver = new FirefoxDriver()
   val commonFuncs = new CommonFuncs()
   val url = commonFuncs.ReadConf("facebookUrl")
 
@@ -47,10 +48,10 @@ class CreateFBPage {
       driver.findElement(By.xpath("//*[@id='pagelet_bookmark_seeall']/div/div[1]/div/div[1]/a")).click();
       driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS)
       driver.findElement(By.xpath("//div[@id='organization']/div/div/i")).click();
-      new Select(driver.findElement(By.xpath("//form[@id='organization_form']/div/select"))).selectByVisibleText("Company");
+      new Select(driver.findElement(By.xpath("//form[@id='organization_form']/div/select"))).selectByVisibleText("Retail and Consumer Merchandise");
       driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS)
       driver.findElement(By.id("organization_form_page_name")).clear();
-      driver.findElement(By.id("organization_form_page_name")).sendKeys("AME "+ itr);
+      driver.findElement(By.id("organization_form_page_name")).sendKeys("FE "+ itr);
       driver.findElement(By.xpath("//*[@id='organization_form']/div[2]/div/input")).click();
       driver.findElement(By.xpath("//*[@id='organization_form']/label/input")).click();
       //driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS)
